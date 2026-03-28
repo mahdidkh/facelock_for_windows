@@ -1,0 +1,6 @@
+opencv-python
+numpy
+deepface
+tf-keras
+pyautogui
+pydirectinput
