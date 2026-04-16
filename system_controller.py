@@ -4,6 +4,9 @@ import time
 import pydirectinput # Meilleur que pyautogui pour le contournement Windows
 import pyautogui # Support pour la frappe de texte
 
+# Désactiver la sécurité (Failsafe) de pyautogui qui cause un plantage si la souris est dans un coin
+pyautogui.FAILSAFE = False
+
 class SystemController:
     """
     Module de Contrôle Système (Avancé) :

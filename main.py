@@ -2,6 +2,15 @@ import cv2
 import time
 import os
 import getpass # Pour saisir le mot de passe sans l'afficher en clair
+import logging
+import warnings
+
+# Suppress annoying TensorFlow, oneDNN, and absl warnings/logs
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+logging.getLogger('tensorflow').setLevel(logging.ERROR)
+warnings.filterwarnings('ignore')
+
 
 from camera_handler import CameraHandler
 from face_detector import FaceDetector
